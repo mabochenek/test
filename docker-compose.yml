@@ -23,7 +23,8 @@ services:
        - "8888:80"
 
     php-fpm:
-      image: patryksem/php-fpm:latest
+      build: ./phpdocker/php
+      container_name: php-fpm
       working_dir: /application
       volumes:
         - .:/application
